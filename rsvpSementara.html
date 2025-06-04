@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Undangan RSVP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #rsvpForm {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>RSVP Undangan Pernikahan</h2>
+  <button onclick="tampilkanForm()">Isi RSVP</button>
+
+  <div id="rsvpForm">
+    <form id="formRSVP">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="kehadiran">Konfirmasi Kehadiran:</label>
+      <select id="kehadiran" name="kehadiran" required>
+        <option value="">-- Pilih --</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+      </select>
+
+      <div class="button-row">
+        <button type="submit">Kirim</button>
+        <button type="button" onclick="tutupForm()">Tutup Form</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function tampilkanForm() {
+      const form = document.getElementById("rsvpForm");
+      form.style.display = "block";
+    }
+
+    function tutupForm() {
+      const form = document.getElementById("rsvpForm");
+      form.style.display = "none";
+    }
+
+    document.getElementById("formRSVP").addEventListener("submit", function(e) {
+      e.preventDefault(); // mencegah reload
+      const nama = document.getElementById("nama").value;
+      const kehadiran = document.getElementById("kehadiran").value;
+      alert("Terima kasih, " + nama + "! RSVP Anda: " + kehadiran);
+      this.reset();
+      tutupForm(); // otomatis menutup form setelah submit
+    });
+  </script>
+
+</body>
+</html>

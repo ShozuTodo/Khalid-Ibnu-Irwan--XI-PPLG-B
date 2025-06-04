@@ -1,0 +1,320 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #c49b66;
+  color: #333;
+  text-align: center;
+  background-image: url(assetsBung/DesktopBunga.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.gambarBunga{
+  position: absolute;
+  bottom: 10px;
+  left: 29%;
+  width: 250px;
+  animation: tiupanAngin 4s ease-in-out infinite;
+}
+
+.kelopakBunga{
+  width: 100px;
+  margin-left: 199px;
+  top: 200px;
+  animation: spin 3s linear infinite;
+}
+
+.grid-galeri {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* fleksibel */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.grid-galeri img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.grid-galeri img:hover {
+  transform: scale(1.05);
+}
+
+#peringatan{
+  display: none;
+}
+
+#opening{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-fill-mode: forwards;
+  transition: all 0.5s ease;
+  background-image: url(assetsBung/DesktopBunga.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.opening h1 {
+  font-size: 3vw; /* mengikuti lebar layar */
+}
+
+.opening button {
+  padding: 1vw 2vw;
+  font-size: 1.2vw;
+}
+
+
+/* Semua section berada di tengah dan latar belakang putih */
+section {
+  background-image: url(assetsGambar/Dust.jpeg);
+  background-color: #F7F8F2;
+  max-width: 500px; /* Ukuran lebih kecil dari sebelumnya */
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px;
+  margin-top: 0;
+}
+
+
+/* Gambar agar terpusat dan rapi */
+section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Tombol tengah */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #c49b66;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+td:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+button:hover {
+  background-color: #a67c52;
+}
+
+/* RSVP Form */
+#rsvpForm {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      max-width: 400px;
+    }
+
+    label {
+      display: flex;
+      margin-top: 10px;
+      font-size: 15px;
+      flex-direction: row;
+    }
+
+    input{
+      width: 91%;
+      padding: 7px;
+      margin-top: 5px;
+    }
+
+    input:hover{
+      transform: scale(1.04);
+      transition: 1s;
+    }
+
+    select:hover{
+      transform: scale(1.04);
+      transition: 1s;
+    }
+
+    select{
+      width: 98%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+    }
+
+    .button-row {
+      margin-top: 10px;
+    }
+
+/* Countdown tampilan angka */
+#countdown div {
+  display: inline-block;
+  margin: 5px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Responsive iframe lokasi */
+.lokasi iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 12px;
+}
+
+.lokasi iframe:hover{
+  transform: scale(1.15);
+  transition: 1s;
+}
+
+.resepsi:hover{
+  transform: scale(1.15);
+  transition: 1s;
+}
+
+.Akad:hover{
+  transform: scale(1.15);
+  transition: 1s;
+}
+
+#tombolMusik {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #c49b66;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#tombolMusik:hover {
+  background-color: #a67c52;
+}
+
+.bunga {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url(assetsBung/bungaHitam.png);
+      background-size: cover;
+      opacity: 0.7;
+      animation: jatuh linear infinite;
+      z-index: 0;
+    }
+
+
+@keyframes slideUpFadeOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tiupanAngin {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes naikTurun {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes goyang {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes jatuh {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+      }
+    }
+
+    @media (max-width: 600px) {
+  section {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
